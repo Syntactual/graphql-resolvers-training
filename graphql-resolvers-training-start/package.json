@@ -1,0 +1,15 @@
+{
+  "name": "graphql-resolvers-training",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Josh Oppenheim",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node example.js"
+  },
+  "dependencies": {
+    "graphql": "^15.4.0",
+    "graphql-import": "^1.0.2"
+  }
+}

@@ -1,0 +1,48 @@
+# Backend for Frontend Example (Pandora UI)
+type Query {
+  UserAccount(userId: Int): User
+  Dashboard(userId: Int): Dashboard
+}
+
+type Mutation {
+  CreateUser(userInput: UserInput!): User!
+}
+
+input UserInput {
+  id: Int
+  firstName: String
+  lastName: String
+  email: String
+  isAdmin: Boolean
+  isDarkTheme: Boolean
+}
+
+type User {
+  id: Int
+  firstName: String
+  lastName: String
+  email: String
+  photoUrl: String
+  isAdmin: Boolean
+  isDarkTheme: Boolean
+}
+
+type Dashboard {
+  user: User
+  collectedSongs: [Song]
+  recentlyPlayedSongs: [Song]
+}
+
+type Song {
+  artist: Artist
+  albumName: String
+  albumArtUrl: String
+  songName: String
+  songUrl: String
+}
+
+type Artist {
+  name: String
+  numberOfAlbums: Int
+}
+
